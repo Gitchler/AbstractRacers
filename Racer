@@ -1,0 +1,10 @@
+public class Racer
+{
+    private String name;
+    private int pos;
+
+    public void move()
+    {
+    
+    }
+}
