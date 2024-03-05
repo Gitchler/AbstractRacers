@@ -21,7 +21,7 @@ public class Tortoise extends Racer
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int move()
+    public void move()
     {
         setPosition(getPosition()+1);
     }
