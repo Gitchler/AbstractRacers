@@ -3,7 +3,7 @@
  * in a race. The abstract method move() is defined differently
  * according to each different subclass that inherits from Racer.
  */
-public abstract class AbstractRacer
+public abstract class Racer
 {
     // instance variables
     private String name;
@@ -30,7 +30,7 @@ public abstract class AbstractRacer
      */
     public String toString()
     {
-        // to be completed
+        return ("Racer: " + name + ", Position: " + position);
     }
 
     /**
@@ -38,9 +38,9 @@ public abstract class AbstractRacer
      * of the racer.
      */
 
-    public abstract int getPosition()
+    public int getPosition()
     {
-        return pos;
+        return position;
     }
 
     /**
@@ -48,8 +48,8 @@ public abstract class AbstractRacer
      * next position and mutates position to that specified location.
      */
 
-    public abstract void setPosition(int loc)
+    public void setPosition(int loc)
     {
-        pos = loc;
+        position = loc;
     }
 }
