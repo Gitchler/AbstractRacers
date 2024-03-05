@@ -16,7 +16,6 @@ public class Hare extends Racer
     public Hare(String name)
     {
         super(name);
-        energy = 3;
     }
 
     /**
@@ -27,7 +26,7 @@ public class Hare extends Racer
      */
     public void move()
     {
-        energy = (int)(Math.random())*5;
+        energy = (int)(Math.random() * 5 + 1);
         if (energy == 1)
         {
             setPosition(getPosition()+1);
