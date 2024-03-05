@@ -27,7 +27,18 @@ public class Hare extends Racer
      */
     public void move()
     {
-        if (energy > 0)
+        energy = (int)(Math.random())*5;
+        if (energy == 1)
+        {
+            setPosition(getPosition()+1);
+        }
+        
+        else if (energy == 2)
+        {
+            setPosition(getPosition()+3);
+        }
+        
+        else if (energy == 3)
         {
             setPosition(getPosition()+5);
         }
