@@ -32,6 +32,11 @@ public abstract class Racer
     {
         return ("Racer: " + name + ", Position: " + position);
     }
+    
+    public String getName()
+    {
+        return name;
+    }
 
     /**
      * The getPosition() method returns the current position

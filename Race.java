@@ -5,6 +5,7 @@ public class Race
     private ArrayList<Racer> contestants;
     private int DISTANCE;
     private boolean ended;
+    private Racer winner;
     
     public Race(int distance)
     {
@@ -43,5 +44,17 @@ public class Race
                 }
             }
         }
+    }
+    
+    public Racer getWinner()
+    {
+        for (Racer racer : contestants)
+        {
+            if (racer.getPosition() >= 100)
+            {
+                winner = racer;
+            }
+        }
+        return winner;
     }
 }

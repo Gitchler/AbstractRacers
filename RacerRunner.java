@@ -10,5 +10,6 @@ public class RacerRunner
         System.out.println(Tam.toString());
         System.out.println(Hoppit.toString());
         theGreatRace.runRace();
+        System.out.println("The winner is " + theGreatRace.getWinner().getName() + "!");
     }
 }
