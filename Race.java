@@ -46,6 +46,18 @@ public class Race
         }
     }
     
+     public boolean raceOver()
+    {
+        if (ended == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
     public Racer getWinner()
     {
         for (Racer racer : contestants)
