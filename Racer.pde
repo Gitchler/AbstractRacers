@@ -25,7 +25,6 @@ public abstract class Racer
      * subclasses.
      */
     public abstract void move();
-    
     /**
      * Overrides the toString method
      */

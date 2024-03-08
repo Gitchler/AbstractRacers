@@ -29,19 +29,14 @@ public class Race
         return DISTANCE;
     }
 
-     public void runRace()
+    public void runRace()
     {
-        while (ended == false)
+        for (Racer racer : contestants)
         {
-            System.out.println("Test");
-            for (Racer racer : contestants)
+            racer.move();
+            if (racer.getPosition() >= DISTANCE)
             {
-                racer.move();
-                System.out.println(racer.toString());
-                if (racer.getPosition() >= DISTANCE)
-                {
-                    ended = true;
-                }
+                ended = true;
             }
         }
     }
