@@ -21,6 +21,7 @@ void setup()
   r = new Race(RACE_DISTANCE);
   r.addContestant(new Tortoise("Tam"));
   r.addContestant(new Hare("Hoppit"));
+  r.addContestant(new Longship("Viking Overlord"));
 }
 
 void drawStartFinish()
@@ -29,6 +30,14 @@ void drawStartFinish()
   strokeWeight(3);
   stroke(200, 0, 0);
   line(RACE_DISTANCE, 0, RACE_DISTANCE, height);
+  
+  //reset stroke
+  strokeWeight(1);
+  stroke(0);
+  
+  strokeWeight(50);
+  stroke(135, 206, 250); // Light blue for viking longship waters
+  line(0, (height/2)+150, width, (height/2)+150);
   
   //reset stroke
   strokeWeight(1);
@@ -50,7 +59,12 @@ void drawRacers()
        else if (r instanceof Hare)
        {
          fill(230,201,154);
-         circle(x, y+200, 50);
+         circle(x, y+150, 50);
+       }
+       else if (r instanceof Longship)
+       {
+         fill (100, 60, 30);
+         circle(x, y+300, 50);
        }
        r.move();
        delay(10);
