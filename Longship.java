@@ -28,7 +28,7 @@ public class Longship extends Racer
      */
     public void move()
     {
-        sailConditions = (int)(Math.random() * 10 + 1);
+        sailConditions = (int)(Math.random() * 9 + 1);
         if (sailConditions == 1)
         {
             //Choppy waters

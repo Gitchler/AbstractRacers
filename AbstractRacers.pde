@@ -59,12 +59,15 @@ void drawRacers()
        else if (r instanceof Hare)
        {
          fill(230,201,154);
-         circle(x, y+150, 50);
+         triangle(x, y+200, x-25, y+150, x+25, y+150);
        }
        else if (r instanceof Longship)
        {
+         //Drawing a semicircle for the ship's hull
          fill (100, 60, 30);
-         circle(x, y+300, 50);
+         float diameter = 60;
+         float rad = diameter/2;
+         arc(x, y+285, diameter, diameter, 0, PI);
        }
        r.move();
        delay(10);
